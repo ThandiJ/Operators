@@ -11,22 +11,22 @@ namespace Hello.Operators
         internal static string GetAssignment(string x,string y)
         {
             StringBuilder sb = new("************Assignment Operators************\n");
-            int number1 =Convert.ToInt32(x); float number2 = Convert.ToInt32(y);
+            int number1 =Convert.ToInt32(x); int number2 = Convert.ToInt32(y);
             sb.AppendLine($"Assignment operator(=) : number1 is {number1} and number2 is {number2}");
 
-            number1 += 10;
+            number1 += number2;
             sb.AppendLine($"Add assignment operator(+=) : {number1}");
 
-            number1 -= 10;
+            number1 -= number2;
             sb.AppendLine($"Subtract assignment operator(-=) : {number1}");
 
-            number1 /= 5;
+            number1 /= number2;
             sb.AppendLine($"Division assignment operator(/=): {number1}");
 
-            number2 *= 2;
+            number2 *= number2;
             sb.AppendLine($"Multiply assignment operator(*=) : {number2}");
 
-            number2 %= 5;
+            number2 %= number2;
             sb.AppendLine($"Modulo assignment operator (%=) : {number2}");
             return sb.ToString();
         }
